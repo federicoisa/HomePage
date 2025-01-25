@@ -12,7 +12,7 @@ export const Projects = () => {
               <a href="/HTML/AcerdaDe.html">
                 <div className="image-container">
                   <img
-                    src="/Fotos de Proyectos/gifExpertApp2.png"
+                    src="/Portfolio-FedericoIsa/Fotos de Proyectos/gifExpertApp2.png"
                     alt="Proyecto"
                   />
                 </div>
