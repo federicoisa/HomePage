@@ -23,26 +23,26 @@ export const Portfolio = () => {
       <nav className="nav">
         <ul>
           <li>
-            <Link to="/Portfolio-FedericoIsa/HomePage">Inicio</Link>
+            <Link to="/HomePage">Inicio</Link>
           </li>
           <li>
-            <Link to="/Portfolio-FedericoIsa/Projects">Proyectos</Link>
+            <Link to="/Projects">Proyectos</Link>
           </li>
           <li>
-            <Link to="/Portfolio-FedericoIsa/CV">CV</Link>
+            <Link to="/CV">CV</Link>
           </li>
           <li>
-            <Link to="/Portfolio-FedericoIsa/contacto">Contacto</Link>
+            <Link to="/contacto">Contacto</Link>
           </li>
         </ul>
       </nav>
 
       <Routes>
-        <Route path="/Portfolio-FedericoIsa" element={<Navigate to="/Portfolio-FedericoIsa/HomePage" />} />
-        <Route path="/Portfolio-FedericoIsa/HomePage" element={<HomePage />} />
-        <Route path="/Portfolio-FedericoIsa/Projects/*" element={<Projects />} />
-        <Route path="/Portfolio-FedericoIsa/contacto" element={<Contacto />} />
-        <Route path="/Portfolio-FedericoIsa/CV" element={<CV />} />
+        <Route path="/" element={<Navigate to="/HomePage" />} />
+        <Route path="/HomePage" element={<HomePage />} />
+        <Route path="/Projects/*" element={<Projects />} />
+        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/CV" element={<CV />} />
       </Routes>
 
       <footer>

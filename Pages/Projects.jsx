@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 
 export const Projects = () => {
     
@@ -9,10 +9,10 @@ export const Projects = () => {
         <div className="flex-container">
           {/* Tarjetas de proyectos */}
             <div className="card">
-              <a href="/Portfolio-FedericoIsa/HTML/AcerdaDe.html">
+              <a href="/HTML/AcerdaDe.html">
                 <div className="image-container">
                   <img
-                    src="/Portfolio-FedericoIsa/images/gifExpertApp2.png"
+                    src="/images/gifExpertApp2.png"
                     alt="Proyecto"
                   />
                 </div>

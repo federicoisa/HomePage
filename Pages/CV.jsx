@@ -4,7 +4,7 @@ export const CV = () => {
     <>
       <div className="CV-card">
         <div className="foto-CV">
-          <img src="/Portfolio-FedericoIsa/images/Foto CV Federico Isa.png" alt="" />
+          <img src="/images/Foto CV Federico Isa.png" alt="" />
         </div>
         <div className="Download-CV">
             <a href="https://drive.google.com/uc?export=download&id=10inVGNT8MFhrSZLeywIHye6008hHIjPZ" download> 
