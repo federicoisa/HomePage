@@ -76,7 +76,7 @@ export const HomePage = () => {
 
           <section>
             <div className="image">
-              <img src="/images/foto fede.jpg" alt="Foto Perfil Portfolio" />
+             <img src="/Portfolio-FedericoIsa/images/foto-fede.jpg" alt="Foto Fede" />
             </div>
           </section>
         </div>
