@@ -72,8 +72,8 @@ export const Portfolio = () => {
             </button>
             <p>
               GitHub:{' '}
-              <a href="https://github.com/tuUsuario" target="_blank">
-                github.com/tuUsuario
+              <a href="https://github.com/federicoisa" target="_blank">
+                github.com/federicoisa
               </a>
             </p>
             <p>Gmail: fedeisa195@gmail.com</p>

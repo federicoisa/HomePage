@@ -9,10 +9,10 @@ export const Projects = () => {
         <div className="flex-container">
           {/* Tarjetas de proyectos */}
             <div className="card">
-              <a href="/HTML/AcerdaDe.html">
+              <a href="/Portfolio-FedericoIsa/HTML/AcerdaDe.html">
                 <div className="image-container">
                   <img
-                    src="/Portfolio-FedericoIsa/Fotos de Proyectos/gifExpertApp2.png"
+                    src="/Portfolio-FedericoIsa/images/gifExpertApp2.png"
                     alt="Proyecto"
                   />
                 </div>
