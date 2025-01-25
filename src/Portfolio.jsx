@@ -5,7 +5,7 @@ import { Projects } from '../Pages/Projects';
 import { CV } from '../Pages/CV';
 import { Contacto } from '../Pages/Contacto';
 
-export const Portfolio = () => {
+export const portfolio = () => {
 
   const handleScrollToUp = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
