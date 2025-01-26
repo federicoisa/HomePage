@@ -58,14 +58,13 @@ export const HomePage = () => {
                   <p className="Mi-Presentacion">
                   <span>¡WELCOME!</span> 
                     <br />
-                    Hello, I’m Federico Isa, a Computer Engineering student currently in the penultimate year of my degree. Throughout my academic journey, I have developed a strong theoretical and practical understanding. My experience includes working on challenging projects, such as collaborating in Scrum teams and implementing management and process optimization methodologies using RUP in the Information Systems II course.
+                    Hello, I am Federico Isa, a Computer Engineering student currently in the penultimate year of my degree. Throughout my academic journey, I have developed a strong theoretical and practical understanding. My experience includes working on challenging projects, such as collaborating in Scrum teams and implementing management and process optimization methodologies using RUP in the Information Systems II course.
                     <br />
                     My focus is clear: I strive to excel in web and full-stack development, always committed to quality and continuous improvement. I have gained key skills in languages such as Java, Python, JavaScript, C, C++, as well as in React, HTML, CSS, and databases. My collaborative work in agile environments, including as a Manual QA, has helped me develop problem-solving, requirements analysis, and strategic decision-making skills.
                     <br />
-                    What drives me is the opportunity to join a dedicated team working on dynamic projects, where I can deliver immediate value while continuing to learn and grow. I’m looking for professional opportunities that allow me to apply my knowledge, especially in frontend and Deep Learning, and contribute to the team’s success. My adaptability and results-oriented approach have enabled me to deliver high-quality projects within deadlines, both in my academic training and external projects.
+                    What drives me is the opportunity to join a dedicated team working on dynamic projects, where I can deliver immediate value while continuing to learn and grow. I am looking for professional opportunities that allow me to apply my knowledge, especially in frontend and Deep Learning, and contribute to the team’s success. My adaptability and results-oriented approach have enabled me to deliver high-quality projects within deadlines, both in my academic training and external projects.
                     <br />
-                    If you’re looking for someone with strong technical skills, a passion for innovation, and the ability to collaborate effectively, I’d be delighted to discuss how I can contribute to your team. You can learn more about my profile and projects in my CV or reach out to me through my social media channels. 
-                    </p>
+                    If you are looking for someone with strong technical skills, a passion for innovation, and the ability to collaborate effectively, I would be delighted to discuss how I can contribute to your team. You can learn more about my profile and projects in my CV or reach out to me through my social media channels.</p>
                     <br />
                   <p className="mensaje">Thank you for visiting my portfolio!</p>
                 </section>

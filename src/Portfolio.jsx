@@ -52,14 +52,8 @@ export const Portfolio = () => {
               <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.59 5.59L20 12l-8-8-8 8z" />
             </svg>
           </button>
-          <p>
-            GitHub:{' '}
-            <a href="https://github.com/federicoisa" target="_blank">
-              github.com/federicoisa
-            </a>
-          </p>
-          <p>Gmail: fedeisa195@gmail.com</p>
         </div>
+        <p>© Portfolio. Sitio desarrollado por fedeisa195@gmail.com</p>
       </footer>
     </div>
   );

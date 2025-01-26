@@ -60,8 +60,6 @@ div.foto-proyect {
   
 div.foto-proyect img {
     width: 1000px;
-    margin-top: 50px;
-    margin-bottom: 30px;
     display: block; /* Asegura que la imagen esté centrada */
     margin-left: auto;
     margin-right: auto;
@@ -76,14 +74,14 @@ div.foto-proyect img {
 .overlay {
     position: absolute;
     margin: 0;
-    top: 50px;
+    top: 0px;
     left: 0;
     right: 0;
-    bottom: 25px;
+    bottom: -5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 300px;
+    gap: 200px;
     opacity: 0; /* Invisible por defecto */
   }
 
@@ -112,9 +110,6 @@ div.foto-proyect img {
     opacity: 1; /* Aparece el ícono */
     filter: none;
   }
-
- 
-
   
   /* Estilos de la descripción */
   p.description {
