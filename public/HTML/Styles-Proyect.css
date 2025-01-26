@@ -81,15 +81,24 @@ div.foto-proyect img {
     right: 0;
     bottom: 25px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 1; /* Invisible por defecto */
+    gap: 300px;
+    opacity: 0; /* Invisible por defecto */
+  }
+
+  .overlay svg{
+    color: rgba(245, 245, 245, 0.627);
+  }
+
+  .overlay svg:hover{
+    color: rgb(241, 221, 153);
   }
   
   /* Aparece al pasar el mouse */
   .foto-proyect:hover .overlay {
     background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    opacity: 1;
   }
   
   /* Estilo de la imagen de GitHub y el texto */
@@ -103,6 +112,8 @@ div.foto-proyect img {
     opacity: 1; /* Aparece el ícono */
     filter: none;
   }
+
+ 
 
   
   /* Estilos de la descripción */
@@ -137,7 +148,15 @@ div.foto-proyect img {
     padding: 25px;
     clear: both;
     display: flex;
-    gap: 40px;
+    gap: 20px;
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
+  }
+
+  footer.flex-container svg{
+    margin-right: 10px;
+  }
+
+  footer.flex-container svg:hover{
+    color: white;
   }
