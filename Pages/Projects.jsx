@@ -9,7 +9,7 @@ export const Projects = () => {
         <div className="flex-container">
           {/* Tarjetas de proyectos */}
             <div className="card">
-              <Link to="/HTML/AcerdaDe.html">
+              <a href="/HTML/AcerdaDe.html">
                 <div className="image-container">
                   <img
                     src="/images/gifExpertApp2.png"
@@ -18,7 +18,7 @@ export const Projects = () => {
                 </div>
                 <p className="project-title">GifExpertApp</p>
                 <p className="subtitle">Ver Descripción</p>
-              </Link>
+              </a>
               <div className="card-content">
                 <p className="project-description">
                   Express con EJS | Turso SQL
