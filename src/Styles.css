@@ -15,10 +15,13 @@ header{
 }
 
 .page-wrapper{
+    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: lightgoldenrodyellow;
+    margin: 0 auto;
 }
 
 .nav{
@@ -59,479 +62,581 @@ header{
     color: black;
 }
 
-.content-wrapper{
-    width: auto;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15%;
-    max-width: 100%;
-    margin-top: 50px;
-    transition: transform 0.3s ease;
+
+
+/* Content Wrapper */
+.content-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%; /* Ajustado el gap para que se reduzca en pantallas pequeñas */
+  max-width: 100%;
+  margin-top: 5vh;
+  transition: transform 0.3s ease;
 }
 
+/* Language Buttons */
 .language-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
-    gap: 10px; /* Espaciado entre los botones */
-  }
-  
-  .language-buttons button {
-    padding: 10px 20px; /* Tamaño de los botones */
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #4CAF50; /* Fondo verde */
-    color: white; /* Texto blanco */
-    border: none; /* Eliminar borde */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Efecto de transición al cambiar de color */
-    width: 200px; /* Ancho de los botones */
-  }
-  
-  .language-buttons button:hover {
-    background-color: #45a049; /* Cambia el color al pasar el mouse */
-  }
-  
-  .language-buttons button:focus {
-    outline: none; /* Eliminar el borde de enfoque */
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw; /* Espaciado dinámico basado en el viewport */
+}
 
+.language-buttons button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 80%; /* Hacer el ancho del botón flexible */
+  max-width: 250px; /* Establecer un máximo para el ancho */
+}
+
+.language-buttons button:hover {
+  background-color: #45a049;
+}
+
+.language-buttons button:focus {
+  outline: none;
+}
+
+/* About Me */
 .About-Me h1 {
-  width: 100%; /* Ocupa todo el ancho disponible */
-  text-align: center; /* Centra el texto horizontalmente */
-  margin: 0 auto; /* Centra el h1 dentro de su contenedor */
-  font-size: 2.5rem; /* Ajusta el tamaño del texto para mejor visibilidad */
-}
-.Mi-Presentacion{
-    text-align: justify;
-    width: 800px;;
-    font-size: 20px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2.5rem;
 }
 
-.About-Me p span{
-    font-weight: bold;
+.Mi-Presentacion {
+  text-align: justify;
+  width: 90%; /* Hacer el ancho flexible */
+  font-size: 1.2rem;
+  max-width: 800px;
 }
 
-.mensaje{
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
+.About-Me p span {
+  font-weight: bold;
 }
 
+.mensaje {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Fade In */
 .fade-in {
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
-  }
-  
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
 
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .slide-in {
-    animation: slide-in 1s ease-out forwards;
-  }
-
-  @keyframes slide-in {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-.typing-effect {
-    text-align: center;
-    width: 700px;
-    font-size: 1.5rem;
-    color: #333;
-    overflow: hidden;
-    font-weight: bold;
-}
-
-@keyframes blink {
   from {
-    border-color: transparent;
+      opacity: 0;
   }
   to {
-    border-color: black;
+      opacity: 1;
   }
 }
 
+/* Slide In */
+.slide-in {
+  animation: slide-in 1s ease-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Typing Effect */
+.typing-effect {
+  text-align: center;
+  width: 90%; /* Hacer el ancho flexible */
+  font-size: 1.5rem;
+  color: #333;
+  overflow: hidden;
+  font-weight: bold;
+  max-width: 700px;
+}
+
+/* Image Styling */
 .image {
-    position: relative;
-    display: inline-block;
-    width: 500px;
-    border-radius: 60px;
-    max-width: 70%;
-    min-width: 25%;
-    overflow: hidden;
-    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
-    transition: transform 0.3s ease;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 60px;
+  overflow: hidden;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
 }
 
 .image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: inherit;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: inherit;
 }
 
-.image:hover{
-    transform: scale(1.1);
+.image:hover {
+  transform: scale(1.1);
 }
 
-.title-section{
-    color: black;
-    margin-left: 20px;
-}
-
-section.proyect{
-    width: 100%;
-    color: rgb(168, 168, 187);
-    border-radius: 5px;
-    margin: auto;
-    margin-bottom: 10%;
-    opacity: 0;
-    animation: proyect 2s ease-in-out forwards;
-}
-
-@keyframes proyect {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-
-.title-section{
-    font-size: 40px;
-    text-shadow: 2px 2px 4px;
-    padding: 3%;
-}
-
-section div.flex-container{
-    flex-wrap: wrap;
-    padding: 5%;
-    gap: 40px;
-    width: 100%;
-    display: flex;
-}
-
-section div.card {
-    width: 500px;
-    background-color: white;
-    border-radius: 15px;
-    max-width: 70%;
-    min-width: 30%;
-    overflow: hidden;
-    text-align: left;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 7px 9px red;
-}
-
-.card-content {
-    padding: 15px;
-    background-color: whitesmoke;
-}
-
-.card a{
-    text-decoration: none;
-}
-
-p.project-title {
-    list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    position: relative;
-    color: white;
-    margin-top: -30px;
-    left: 15px;
-    right: 0;
-    text-align: left;
-    font-weight: bold;
-    transition: transform 0.3s ease;
-}
-
-.subtitle{
-    position: absolute;
-    left: 15px;
-    color: white;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    opacity: 0;
-}
-
-.card:hover p.project-title {
-    transform: translateY(-20px);
-}
-
-.card:hover p.subtitle{
-    transform: translateY(-20px);
-    opacity: 1;
-}
-
-.image-container {
-    position: relative;
-    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
-    transition: transform 0.3s ease;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid #333;
-    box-shadow: 0px 8px 15px -5px rgba(0, 0, 0, 0.5);
-}
-
-.image-container img {
-    width: 100%;
-    display: block;
-    object-fit: contain;
-}
-
-.image-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.project-description {
-    font-size: 20px;
-    color: #6c757d;
-    margin-bottom: 10px;
-}
-
-.icons {
-    display: flex;
-    gap: 420px;
-}
-
-.icons i {
-    font-size: 18px;
-    color: #333;
-    cursor: pointer;
-}
-
-.icons i:hover {
-    color: #007bff;
-}
-
-.CV-card {
-    display: flex;
-    gap: 50px;
-    min-width: 50%;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    animation: CV-card 2s ease-in-out forwards;
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Ajustes para pantallas pequeñas */
+  .content-wrapper {
+      gap: 5%;  /* Reducir el gap en pantallas más pequeñas */
+      margin-top: 3vh;
   }
 
-  @keyframes CV-card {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-
-  .foto-CV img {
-    width: 100%;
+  .language-buttons button {
+      width: 90%; /* Los botones ocupan el 90% del ancho en pantallas pequeñas */
+      max-width: 220px;
   }
 
-  .Download-CV svg {
-    width: 100%;
-    transition: color 0.3s ease;
+  .Mi-Presentacion {
+      font-size: 1rem; /* Reducir tamaño del texto */
   }
 
-  .Download-CV svg:hover {
-    color: red;
+  .About-Me h1 {
+      font-size: 2rem; /* Reducir tamaño del título */
   }
 
-  .contacto{
-    opacity: 0;
-    animation: contacto 1s ease-in-out forwards;
+  .mensaje {
+      font-size: 1.5rem; /* Reducir tamaño del mensaje */
   }
 
-  @keyframes contacto {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-
-  .card-contacto {
-    background-color: whitesmoke;
-    width: 1000px;
-    height: 400px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
-    max-width: 700px;
-    margin: 50px auto; /* Centra el formulario horizontalmente */
-  }
-  
-  .card-contacto form {
-    display: flex;
-    flex-direction: column; /* Coloca los elementos uno debajo del otro */
-    gap: 15px; /* Espaciado entre los elementos */
-  }
-  
-  .card-contacto input,
-  .card-contacto textarea,
-  .card-contacto button {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .card-contacto textarea {
-    height: 200px; /* Ajusta el tamaño del área de texto */
-    resize: none; /* Evita que el usuario cambie el tamaño manualmente */
-  }
-  
-  .card-contacto button {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .card-contacto button:hover {
-    background-color: #0056b3; /* Color al pasar el mouse */
+  .image {
+      max-width: 250px; /* Hacer la imagen más pequeña */
   }
 
-
-footer{
-    background-color: black;
-    color: wheat;
-    padding: 10px;
-    font-size: 20px;
-    clear: both;
-    text-align: center;
-    box-sizing: border-box;
-    flex-shrink: 0;
-}
-
-footer{
-    margin-top: auto;
-}
-
-footer .flex-container{
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-}
-
-#Scroll-Arrow {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(93, 93, 201, 0.606);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease;
-}
-
-#Scroll-Arrow:hover {
-    transform: scale(1.1);
-    background-color: darkblue;
-    color: snow;
-}
-
-/* Agregar las media queries para hacerlo responsivo */
-@media (max-width: 300px) {
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav a {
-        padding: 10px 20px;
-    }
-
-    .About-Me {
-        flex-direction: column;
-        gap: 20px;
-        margin: 5%;
-    }
-
-    .image {
-        width: 80%; /* Hace la imagen más pequeña */
-    }
-
-    .CV-card {
-        width: 100%; /* Reduce el tamaño de la tarjeta */
-    }
-
-    section div.card {
-        width: 100%; /* Hace las tarjetas más pequeñas en pantallas pequeñas */
-    }
-
-    section div.flex-container {
-        max-width: 300px;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
+  .typing-effect {
+      font-size: 1.2rem; /* Reducir tamaño del texto */
+  }
 }
 
 @media (max-width: 480px) {
-    header {
-        text-align: center;
-        padding-left: 0;
-    }
+  /* Ajustes para dispositivos más pequeños */
+  .content-wrapper {
+      gap: 3%;  /* Reducir aún más el gap */
+      margin-top: 2vh;
+  }
 
-    .title-section {
-        font-size: 28px;
-    }
+  .language-buttons button {
+      width: 100%;
+      max-width: none; /* Sin límite de ancho */
+      font-size: 1rem;
+  }
 
-    section.proyect {
-        margin-bottom: 5%;
-    }
+  .Mi-Presentacion {
+      font-size: 0.9rem; /* Reducir tamaño del texto */
+  }
 
-    .card-content {
-        padding: 10px;
-    }
+  .About-Me h1 {
+      font-size: 1.8rem; /* Reducir tamaño del título */
+  }
 
-    .project-description {
-        font-size: 16px;
-    }
+  .mensaje {
+      font-size: 1.2rem; /* Reducir tamaño del mensaje */
+  }
 
-    #Scroll-Arrow {
-        bottom: 10px;
-        right: 10px;
-        width: 40px;
-        height: 40px;
-    }
+  .image {
+      max-width: 200px; /* Hacer la imagen más pequeña */
+  }
+
+  .typing-effect {
+      font-size: 1rem; /* Reducir tamaño del texto */
+  }
+}
+
+
+.title-section {
+  color: black;
+  margin-left: 5%; /* Usamos porcentaje para que sea más responsivo */
+  font-size: 2.5rem; /* Usamos rem para mejor escalabilidad */
+  text-shadow: 2px 2px 4px;
+  padding: 3%;
+}
+
+section.proyect {
+  width: 100%;
+  color: rgb(168, 168, 187);
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 10%;
+  opacity: 0;
+  animation: proyect 2s ease-in-out forwards;
+}
+
+@keyframes proyect {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+section div.flex-container {
+  flex-wrap: wrap;
+  padding: 5%;
+  gap: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Aseguramos que los elementos se alineen correctamente */
+}
+
+section div.card {
+  width: 100%; /* Aseguramos que sea responsivo */
+  max-width: 500px; /* Limita el tamaño máximo para pantallas grandes */
+  background-color: white;
+  border-radius: 15px;
+  min-width: 30%;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 7px 9px red;
+}
+
+.card-content {
+  padding: 15px;
+  background-color: whitesmoke;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+p.project-title {
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem; /* Usamos rem para escalabilidad */
+  position: relative;
+  color: white;
+  margin-top: -30px;
+  left: 15px;
+  right: 0;
+  text-align: left;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.subtitle {
+  position: absolute;
+  left: 15px;
+  color: white;
+  font-size: 1rem; /* Usamos rem para escalabilidad */
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+}
+
+.card:hover p.project-title {
+  transform: translateY(-20px);
+}
+
+.card:hover p.subtitle {
+  transform: translateY(-20px);
+  opacity: 1;
+}
+
+.image-container {
+  position: relative;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #333;
+  box-shadow: 0px 8px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.project-description {
+  font-size: 1rem; /* Usamos rem para escalabilidad */
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px; /* Reducimos el espacio para dispositivos pequeños */
+  justify-content: center; /* Centrar los iconos */
+}
+
+.icons i a{
+  font-size: 1.25rem; /* Usamos rem para escalabilidad */
+  color: #333;
+  cursor: pointer;
+}
+
+.icons i a:hover {
+  color: #007bff;
+}
+
+.CV-card {
+  display: flex;
+  gap: 50px;
+  min-width: 50%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: CV-card 2s ease-in-out forwards;
+}
+
+
+@keyframes CV-card {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .title-section {
+      font-size: 1.8rem;
+      margin-left: 10%; /* Ajuste para pantallas pequeñas */
+  }
+
+  section div.card {
+      max-width: 100%;
+  }
+
+  .flex-container {
+      gap: 20px; /* Reducir el espacio entre las tarjetas */
+  }
+
+  .icons {
+      gap: 20px;
+  }
+}
+
+
+.foto-CV img {
+  width: 100%; /* Hace que la imagen ocupe todo el contenedor */
+  height: auto; /* Mantiene la relación de aspecto */
+}
+
+.Download-CV svg {
+  width: 100%; /* Hace que el SVG ocupe todo el contenedor */
+  transition: fill 0.3s ease; /* Transición para cambio de color */
+  fill: #333; /* Color inicial del icono */
+}
+
+.Download-CV svg:hover {
+  fill: red; /* Cambia el color cuando se hace hover */
+}
+
+/* Opcional: Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .foto-CV img {
+      width: 100%; /* Asegura que la imagen se adapte en pantallas pequeñas */
+      height: auto; /* Mantiene la proporción de la imagen */
+  }
+
+  .Download-CV svg {
+      width: 50%; /* Ajusta el tamaño del icono en pantallas pequeñas */
+  }
+}
+
+
+.contacto {
+  opacity: 0;
+  animation: contacto 1s ease-in-out forwards;
+}
+
+@keyframes contacto {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card-contacto {
+  background-color: whitesmoke;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 700px; /* Limita el ancho máximo a 700px */
+  height: auto; /* Ajusta la altura automáticamente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+  margin: 50px auto; /* Centra el formulario horizontalmente */
+  box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.card-contacto form {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos uno debajo del otro */
+  gap: 15px; /* Espaciado entre los elementos */
+}
+
+.card-contacto input,
+.card-contacto textarea,
+.card-contacto button {
+  width: 100%; /* Asegura que los campos no excedan el ancho disponible */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.card-contacto textarea {
+  height: 200px; /* Ajusta el tamaño del área de texto */
+  resize: none; /* Evita que el usuario cambie el tamaño manualmente */
+}
+
+.card-contacto button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-contacto button:hover {
+  background-color: #0056b3; /* Color al pasar el mouse */
+}
+
+@media (max-width: 480px) {
+  /* Para dispositivos muy pequeños como teléfonos */
+  .card-contacto {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .card-contacto textarea {
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Para tabletas pequeñas y teléfonos más grandes */
+  .card-contacto {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 600px;
+  }
+
+  .card-contacto textarea {
+    height: 150px;
+  }
+
+  .card-contacto input,
+  .card-contacto button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Para tabletas grandes */
+  .card-contacto {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 800px;
+  }
+}
+
+
+
+footer {
+  background-color: black;
+  color: wheat;
+  padding: 10px;
+  font-size: 20px;
+  clear: both;
+  text-align: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%; /* Asegura que el footer ocupe el 100% del ancho disponible */
+  margin-top: auto;
+  max-width: 100%; /* Evita que el footer se estire más allá del contenedor principal */
+}
+
+footer .flex-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  footer .flex-container {
+      flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+      gap: 20px; /* Reduce el espacio entre elementos */
+  }
+}
+
+#Scroll-Arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(93, 93, 201, 0.606);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  #Scroll-Arrow {
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+#Scroll-Arrow:hover {
+  transform: scale(1.1);
+  background-color: darkblue;
+  color: snow;
 }
