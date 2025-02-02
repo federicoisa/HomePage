@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Portfolio } from './portfolio';
+import { Portfolio } from './Portfolio';
 import {BrowserRouter as Router} from 'react-router-dom'; 
 
 import './Styles.css';
