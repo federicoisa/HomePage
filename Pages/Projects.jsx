@@ -77,19 +77,19 @@ export const Projects = () => {
               </div>
             </div>
             <div className="card">
-              <a href="/HTML/projects-Heroes.html">
+              <a href="/HTML/projects-journal.html">
                 <div className="image-container">
                   <img
-                    src="/images/imagen heroes app 2.jpg"
+                    src="/images/Imagen journalApp.png"
                     alt="Proyecto"
                   />
                 </div>
-                <p className="project-title">Heroes App</p>
+                <p className="project-title">Journal App</p>
                 <p className="subtitle">Ver Descripción</p>
               </a>
               <div className="card-content">
                 <p className="project-description">
-                  Javascript | HTML | CSS | React | SPA ( Single Page Application ) a profundidad y multiples routers
+                  Javascript | HTML | CSS | React | Material UI | Login y logout | Firestore y CRUD
                 </p>
                 <div className="icons">
                   <i className="fab fa-github">
