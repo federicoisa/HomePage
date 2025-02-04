@@ -1,157 +1,230 @@
-*{
-    scrollbar-width: thin; /* Tamaño de la barra: thin, auto o none */
-    scrollbar-color: #007bff #f0f0f0; /* thumb color y track color */
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #f0f0f0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.box-general{
-    margin: 5px;
-    box-shadow: 0 0 10px 10px wheat;
+.box-general {
+  margin: 5px;
+  box-shadow: 0 0 10px 10px wheat;
 }
 
-header{
-    margin: 0;
-    background-color: rgb(172, 169, 169);
-    height: 100px;
-    font-size: 30px;
-    text-align: center;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-h1{
-    color: wheat;
+header {
+  margin: 0;
+  background-color: rgb(172, 169, 169);
+  height: 80px; /* Se reduce la altura en móviles */
+  font-size: 24px; /* Se ajusta el tamaño del texto */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-.cross svg{
-    position: fixed;
-    width: 50px;
-    height: 100px;
-    top: 5px;
-    right: 20px;
-    color:black;
-    transition: transform 1s ease;
+h1 {
+  color: wheat;
 }
 
-.cross svg:hover{
-    color: red;
-    transform: rotate(360deg);
+.cross svg {
+  position: fixed;
+  width: 50px;
+  height: 80px;
+  top: 5px;
+  right: 15px;
+  color: black;
+  transition: transform 1s ease;
 }
 
-/* Estilos básicos para la imagen */
-
-.flex1-container{
-    margin: 0;
-    background-color: whitesmoke;
-    height: calc(70vh - 80px); /* Altura total menos header y footer */
-    display: flex;
-    gap: 40px;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+.cross svg:hover {
+  color: red;
+  transform: rotate(360deg);
 }
 
+/* Contenedor principal */
+.flex1-container {
+  min-height: calc(50vh - 80px); /* Resta la altura del header */
+  margin: 0;
+  background-color: whitesmoke;
+  height: auto; /* Se ajusta la altura para evitar problemas en móviles */
+  display: flex;
+  flex-direction: column; /* Se apilan los elementos en móviles */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Imagen del proyecto */
 div.foto-proyect {
-    position: relative;
-    width: 1000px; /* Ajusta según necesites */
-    height: auto;
-  }
-  
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+}
+
 div.foto-proyect img {
-    width: 1000px;
-    display: block; /* Asegura que la imagen esté centrada */
-    margin-left: auto;
-    margin-right: auto;
-    transition: filter 0.5s ease; /* Suaviza el efecto de desenfoque */
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto;
+  transition: filter 0.5s ease;
 }
-  
-  /* Efecto de desenfoque y aparición del overlay */
-.foto-proyect:hover img{
-    filter: blur(5px); /* Aplica el desenfoque al pasar el cursor */
-}
-  
+
+/* Overlay */
 .overlay {
-    position: absolute;
-    margin: 0;
-    top: 0px;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 200px;
-    opacity: 0; /* Invisible por defecto */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* Se reduce el espacio entre los íconos en móviles */
+  opacity: 0;
+}
+
+.overlay svg {
+  color: rgba(245, 245, 245, 0.627);
+}
+
+.overlay svg:hover {
+  color: rgb(241, 221, 153);
+}
+
+/* Aparece al pasar el mouse */
+.foto-proyect:hover .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+/* Ícono de GitHub */
+.overlay img {
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+}
+
+.foto-proyect:hover .overlay img {
+  opacity: 1;
+  filter: none;
+}
+
+/* Descripción del proyecto */
+p.description {
+  margin: 0;
+  padding: 5%;
+  background-color: whitesmoke;
+  color: black;
+  text-align: justify;
+  font-size: 18px;
+}
+
+/* Contenedor flexible */
+.flex2-container {
+  min-height: 50vh; /* Resta la altura del header */
+  margin: 0;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Footer */
+footer.flex-container {
+  margin: 0;
+  background-color: black;
+  color: wheat;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  clear: both;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+footer.flex-container svg {
+  margin-right: 0;
+}
+
+footer.flex-container svg:hover {
+  color: white;
+}
+
+/* ---- MEDIA QUERIES ---- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  header {
+      height: 70px;
+      font-size: 22px;
   }
 
-  .overlay svg{
-    color: rgba(245, 245, 245, 0.627);
+  .flex1-container {
+      gap: 15px;
   }
 
-  .overlay svg:hover{
-    color: rgb(241, 221, 153);
+  div.foto-proyect {
+      width: 90%;
   }
-  
-  /* Aparece al pasar el mouse */
-  .foto-proyect:hover .overlay {
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
-    opacity: 1;
+
+  .overlay {
+      gap: 100px;
   }
-  
-  /* Estilo de la imagen de GitHub y el texto */
-  div.overlay img {
-    width: 100px; /* Tamaño del ícono */
-    height: 100px;
-    opacity: 0; /* Invisible por defecto */
-  }
-  
-  .foto-proyect:hover .overlay img {
-    opacity: 1; /* Aparece el ícono */
-    filter: none;
-  }
-  
-  /* Estilos de la descripción */
+
   p.description {
-    margin: 0;
-    padding: 5%;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: whitesmoke;
-    color: black;
-    text-align: justify;
-    white-space: normal;
-    font-size: 20px;
+      font-size: 16px;
   }
-  
-  /* Contenedor flexible */
-  section .flex2-container {
-    margin: 0px;
-    background-color: whitesmoke;
-    display: flex;
-    gap: 40px;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  header {
+      height: 60px;
+      font-size: 20px;
   }
 
-  footer.flex-container{
-    margin: 0;
-    background-color: black;
-    color: wheat;
-    flex-shrink: 0; /* Evita que el footer se reduzca */
-    box-sizing: border-box;
-    padding: 25px;
-    clear: both;
-    display: flex;
-    gap: 20px;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+  .cross svg {
+      width: 30px;
+      height: 60px;
   }
 
-  footer.flex-container svg{
-    margin-right: 10px;
+  .flex1-container {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
   }
 
-  footer.flex-container svg:hover{
-    color: white;
+  div.foto-proyect {
+      width: 100%;
   }
+
+  .overlay {
+      gap: 50px;
+  }
+
+  .overlay img {
+      width: 60px;
+      height: 60px;
+  }
+
+  p.description {
+      font-size: 14px;
+      padding: 5%;
+  }
+
+  footer.flex-container {
+      padding: 15px;
+  }
+}
